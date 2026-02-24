@@ -6,6 +6,8 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { NavbarComponent } from "../navbar/navbar/navbar.component";
+import { addIcons } from 'ionicons';
+import { codeWorkingOutline, imageOutline, languageOutline, laptopOutline, phonePortraitOutline, searchCircleOutline, videocamOutline } from 'ionicons/icons';
 
 
 @NgModule({
@@ -18,4 +20,7 @@ import { NavbarComponent } from "../navbar/navbar/navbar.component";
 ],
   declarations: [HomePage]
 })
-export class HomePageModule {}
+export class HomePageModule {
+  constructor(){
+  addIcons({searchCircleOutline,codeWorkingOutline,imageOutline,phonePortraitOutline,languageOutline,videocamOutline,laptopOutline})}
+}

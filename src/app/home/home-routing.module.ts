@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePage } from './home.page';
 import { NavbarComponent } from '../navbar/navbar/navbar.component';
+import { ProgrammationComponent } from '../categorie/programmation/programmation.component';
 
 const routes: Routes = [
   {
@@ -18,4 +19,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class HomePageRoutingModule {}
+export class HomePageRoutingModule {
+}

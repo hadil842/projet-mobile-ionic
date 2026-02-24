@@ -1,8 +1,9 @@
 import { Component} from '@angular/core';
+import { NavController } from '@ionic/angular';
 import { IonButton, IonIcon } from '@ionic/angular/standalone';
 
 import { addIcons } from 'ionicons';
-import { home, } from 'ionicons/icons';
+import { add, addOutline, home, person, personCircleOutline, searchCircleOutline, } from 'ionicons/icons';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -11,9 +12,16 @@ import { home, } from 'ionicons/icons';
 })
 export class NavbarComponent{
 
-  constructor() {
+  constructor(private nav:NavController) {
+       addIcons({home,searchCircleOutline,personCircleOutline,addOutline})
 
   }
+  gotohome() {
+     this.nav.navigateForward('home');
+}
+goajouter() {
+     this.nav.navigateForward('ajouter');
+}
 
 }
 
