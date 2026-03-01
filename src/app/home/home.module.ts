@@ -8,6 +8,7 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { NavbarComponent } from "../navbar/navbar/navbar.component";
 import { addIcons } from 'ionicons';
 import { codeWorkingOutline, imageOutline, languageOutline, laptopOutline, phonePortraitOutline, searchCircleOutline, videocamOutline } from 'ionicons/icons';
+import { HeaderComponent } from "../navbar/header/header.component";
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { codeWorkingOutline, imageOutline, languageOutline, laptopOutline, phone
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    NavbarComponent
+    NavbarComponent,
+    HeaderComponent
 ],
   declarations: [HomePage]
 })
