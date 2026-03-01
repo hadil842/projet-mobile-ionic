@@ -7,6 +7,7 @@ import { WritingComponent } from './categorie/writing/writing.component';
 import { DigitalmarketingComponent } from './categorie/digitalmarketing/digitalmarketing.component';
 import { AiserComponent } from './categorie/aiser/aiser.component';
 import { AjoutoptionComponent } from './ajout/ajoutoption/ajoutoption.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
@@ -39,6 +40,9 @@ const routes: Routes = [
   },{
     path:'ajouter',
     component:AjoutoptionComponent,
+  },{
+    path:'login',
+    component:LoginComponent,
   }
 
 

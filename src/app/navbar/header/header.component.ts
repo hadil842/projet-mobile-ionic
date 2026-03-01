@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 import { IonToolbar, IonImg, IonTitle, IonButton, IonButtons } from "@ionic/angular/standalone";
 
@@ -9,9 +10,10 @@ import { IonToolbar, IonImg, IonTitle, IonButton, IonButtons } from "@ionic/angu
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent  implements OnInit {
-
-  constructor() { }
-
+  constructor(private navCtrl: NavController) {}
+  goToLogin() {
+       this.navCtrl.navigateForward('login');
+  }
   ngOnInit() {}
 
 }

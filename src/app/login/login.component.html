@@ -1,0 +1,63 @@
+<ion-header [translucent]="true">
+<app-header></app-header>
+</ion-header>
+
+<ion-content>
+  <h1>Log in chez FreeFlow</h1>
+  <div class="login-container">
+
+    <!-- Champ Email -->
+    <ion-item class="input-item">
+      <ion-input
+        type="email"
+        label="Username or Email"
+        label-placement="floating"
+        placeholder="Enter your username or email">
+      </ion-input>
+    </ion-item>
+
+    <!-- Champ mot de passe  -->
+    <ion-item class="input-item">
+      <ion-input
+        type="password"
+        label="PassWord"
+        label-placement="floating"
+        placeholder="Enter your password">
+      </ion-input>
+    </ion-item>
+
+    <!-- Bouton Continue -->
+    <ion-button expand="block" class="continue-button">
+      Continue
+    </ion-button>
+
+    <!-- Séparateur -->
+    <div class="separator">
+      <span>or</span>
+    </div>
+
+    <!-- Google -->
+    <ion-button expand="block" class="social-button">
+      <ion-icon slot="start" name="logo-google"></ion-icon>
+      Continue with Google
+    </ion-button>
+
+    <!-- Apple -->
+    <ion-button expand="block" class="social-button apple-button">
+      <ion-icon slot="start" name="logo-apple"></ion-icon>
+      Continue with Apple
+    </ion-button>
+
+    <!-- Signup -->
+    <div class="signup-section">
+      <p class="signup-text">Don't have an account?</p>
+      <ion-button fill="clear" class="signup-button">
+        Sign Up
+      </ion-button>
+    </div>
+
+  </div>
+
+</ion-content>
+
+<ion-footer><ion-toolbar><app-navbar></app-navbar></ion-toolbar> </ion-footer>
