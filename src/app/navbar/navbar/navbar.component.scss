@@ -1,8 +1,162 @@
 
-.button-nav{
+/*.button-nav{
    margin-left: 40px;
    width: 54px;
    height: 35px;
    border-radius: 40px;
+}*/
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+  padding: 12px 20px;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  z-index: 1000;
 }
 
+.button-nav {
+  --background: transparent;
+  --background-hover: transparent;
+  --background-activated: transparent;
+  --background-focused: transparent;
+  --color: #6c757d;
+  --color-hover: #4361ee;
+  --padding-start: 12px;
+  --padding-end: 12px;
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+  --border-radius: 16px;
+  --box-shadow: none;
+  
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 0 4px;
+}
+
+.button-nav::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #4361ee, #06b6d4);
+  border-radius: 3px;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-nav:hover {
+  --color: #4361ee;
+  transform: translateY(-2px);
+}
+
+.button-nav:hover::after {
+  width: 60%;
+}
+
+.button-nav:active {
+  transform: translateY(0);
+}
+
+.button-nav ion-icon {
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.button-nav:hover ion-icon {
+  transform: scale(1.1);
+}
+
+/* Animation au clic */
+.button-nav:active ion-icon {
+  transform: scale(0.95);
+}
+
+/* Effet de ripple personnalisé */
+.button-nav::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(67, 97, 238, 0.3) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+  pointer-events: none;
+}
+
+.button-nav:active::before {
+  width: 200%;
+  height: 200%;
+}
+
+/* État actif (à ajouter dynamiquement) */
+.button-nav.active {
+  --color: #4361ee;
+}
+
+.button-nav.active::after {
+  width: 60%;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  nav {
+    max-width: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 32px 32px 0 0;
+  }
+}
+
+/* Mode sombre */
+@media (prefers-color-scheme: dark) {
+  nav {
+    background: linear-gradient(145deg, #1a1b1e 0%, #2c2e33 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .button-nav {
+    --color: #adb5bd;
+    --color-hover: #60a5fa;
+  }
+  
+  .button-nav:hover {
+    --color: #60a5fa;
+  }
+  
+  .button-nav::after {
+    background: linear-gradient(90deg, #60a5fa, #22d3ee);
+  }
+  
+  .button-nav::before {
+    background: radial-gradient(circle, rgba(96, 165, 250, 0.3) 0%, transparent 70%);
+  }
+}
+
+/* Animation d'entrée */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+nav {
+  animation: slideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}

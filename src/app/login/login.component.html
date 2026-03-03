@@ -3,7 +3,7 @@
 </ion-header>
 
 <ion-content>
-  <h1>Log in chez FreeFlow</h1>
+  <h1>Welcome Back to FreeFlow</h1>
   <div class="login-container">
 
     <!-- Champ Email -->
@@ -27,7 +27,7 @@
     </ion-item>
 
     <!-- Bouton Continue -->
-    <ion-button expand="block" class="continue-button">
+    <ion-button  class="continue-button">
       Continue
     </ion-button>
 
@@ -51,7 +51,7 @@
     <!-- Signup -->
     <div class="signup-section">
       <p class="signup-text">Don't have an account?</p>
-      <ion-button fill="clear" class="signup-button">
+      <ion-button fill="clear" class="signup-button" (click)="goToSignup()">
         Sign Up
       </ion-button>
     </div>

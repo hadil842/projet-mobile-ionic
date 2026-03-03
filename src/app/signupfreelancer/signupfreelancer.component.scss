@@ -1,0 +1,64 @@
+.main-title {
+  font-weight: 800;
+  font-size: 2.2rem;
+  margin-bottom: 5px;
+  
+  /* On remplace le dégradé par une couleur profonde et moderne */
+  color: #4a148c; /* Un mauve foncé très élégant */
+
+               
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+.sub-title {
+  color: #666;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.custom-input {
+  --background: #f8f9fa;
+  --border-radius: 12px;
+  margin-bottom: 12px;
+  --padding-start: 15px;
+  border: 1px solid #eee; /* Pour mieux définir les champs */
+}
+
+.terms-simple-text {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 20px;
+  
+  strong {
+    color: #8e44ad; /* Mauve pour rappeler l'action */
+    text-decoration: underline;
+  }
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.signup-button {
+  background: #8e44ad;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  width: 80%; /* Largeur du bouton */
+  box-shadow: 0 4px 15px rgba(142, 68, 173, 0.3);
+  transition: transform 0.2s ease;
+
+  &:active {
+    transform: scale(0.95); /* Effet d'appui */
+    background: #732d91;
+  }
+}

@@ -8,6 +8,9 @@ import { DigitalmarketingComponent } from './categorie/digitalmarketing/digitalm
 import { AiserComponent } from './categorie/aiser/aiser.component';
 import { AjoutoptionComponent } from './ajout/ajoutoption/ajoutoption.component';
 import { LoginComponent } from './login/login.component';
+import { Signup1Component } from './signup1/signup1.component';
+import { SignupfreelancerComponent } from './signupfreelancer/signupfreelancer.component';
+import { SignupclientComponent } from './signupclient/signupclient.component';
 
 const routes: Routes = [
   {
@@ -43,7 +46,17 @@ const routes: Routes = [
   },{
     path:'login',
     component:LoginComponent,
+  },{
+    path:'signup1',
+    component:Signup1Component,
+  },{
+    path:'signupfreelancer',
+    component:SignupfreelancerComponent,
+  },{
+    path:'signupclient',
+    component:SignupclientComponent,
   }
+
 
 
 ];

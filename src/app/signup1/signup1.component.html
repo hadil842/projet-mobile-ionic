@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+<app-header></app-header>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="selection-container">
+    <!-- Titre -->
+    <h1>Join as a client or freelancer</h1>
+    <div class="options-grid">
+      <!-- Option Client -->
+      <ion-card 
+        class="option-card" 
+        [class.selected]="selectedOption === 'client'"
+        (click)="selectOption('client')">
+        <ion-card-content>
+          <div class="option-content">
+            <div class="checkbox-container">
+              <div class="checkbox" [class.checked]="selectedOption === 'client'">
+                <ion-icon *ngIf="selectedOption === 'client'" name="checkmark"></ion-icon>
+              </div>
+            </div>
+            <div class="option-text">
+              <h2>I'm a client, hiring for a project</h2>
+            </div>
+          </div>
+        </ion-card-content>
+      </ion-card>
+
+      <!-- Option Freelancer -->
+      <ion-card 
+        class="option-card" 
+        [class.selected]="selectedOption === 'freelancer'"
+        (click)="selectOption('freelancer')">
+        <ion-card-content>
+          <div class="option-content">
+            <div class="checkbox-container">
+              <div class="checkbox" [class.checked]="selectedOption === 'freelancer'">
+                <ion-icon *ngIf="selectedOption === 'freelancer'" name="checkmark"></ion-icon>
+              </div>
+            </div>
+            <div class="option-text">
+              <h2>I'm a freelancer, looking for work</h2>
+            </div>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>
+
+
+<ion-footer><ion-toolbar><app-navbar></app-navbar></ion-toolbar> </ion-footer>
+

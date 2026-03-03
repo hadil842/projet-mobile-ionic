@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+<app-header></app-header>
+</ion-header>
+<ion-content class="ion-padding">
+  <div class="header-container ion-text-center ion-margin-bottom">
+    <h1 class="main-title">Become a client</h1>
+    <p class="sub-title">Join our community of talents</p>
+  </div>
+
+  <form>
+    <ion-list lines="none">
+      <ion-item class="custom-input">
+        <ion-input label="Full Name" labelPlacement="stacked" placeholder="Enter your full name " type="text"></ion-input>
+      </ion-item>
+
+      <ion-item class="custom-input">
+        <ion-input label="Email Address" labelPlacement="stacked" placeholder="exemple@example.com" type="email"></ion-input>
+      </ion-item>
+
+      <ion-item class="custom-input">
+        <ion-input label="Phone Number" labelPlacement="stacked" placeholder="+216 99 999 999" type="tel"></ion-input>
+      </ion-item>
+
+      <ion-item class="custom-input">
+        <ion-input label="Password" labelPlacement="stacked" placeholder="********" type="password"></ion-input>
+      </ion-item>
+
+      <ion-item class="custom-input">
+        <ion-input label="Confirm Password" labelPlacement="stacked" placeholder="********" type="password"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <div class="custom-terms-container">
+  <label class="checkbox-wrapper">
+    <input type="checkbox" class="native-checkbox">
+    <span class="checkmark"></span>
+    <span class="terms-text">
+      By signing up, you agree to our <strong>Terms & Conditions</strong>
+    </span >
+  </label>
+</div>
+
+    <div class="button-wrapper">
+      <button class="signup-button">Sign Up</button>
+    </div>
+  </form>
+</ion-content>
+
+<ion-footer><ion-toolbar><app-navbar></app-navbar></ion-toolbar> </ion-footer>

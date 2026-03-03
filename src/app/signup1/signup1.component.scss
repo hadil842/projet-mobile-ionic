@@ -1,0 +1,107 @@
+.selection-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+
+  h1 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+    letter-spacing: -0.3px;
+  }
+}
+
+.options-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.option-card {
+  margin: 0;
+  border-radius: 20px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+  cursor: pointer;
+  border: 1.5px solid #e0e0e0 !important;
+  transition: all 0.2s ease;
+
+  &.selected {
+    border-color: #7c3aed !important; // Violet comme dans l'image
+    background: #faf5ff;
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15) !important;
+  }
+
+  ion-card-content {
+    padding: 20px 16px !important;
+  }
+
+  .option-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .checkbox-container {
+    flex-shrink: 0;
+  }
+
+  .checkbox {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #d1d5db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+
+    &.checked {
+      background: #7c3aed;
+      border-color: #7c3aed;
+      
+      ion-icon {
+        color: white;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .option-text {
+    flex: 1;
+    
+    h2 {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 0;
+      color: #1a1a1a;
+      line-height: 1.4;
+    }
+  }
+}
+
+// Supprimer les marges/paddings par défaut d'Ionic
+ion-card {
+  box-shadow: none;
+  margin: 0;
+}
+
+// Responsive
+@media (max-width: 480px) {
+  .selection-container {
+    h1 {
+      font-size: 24px;
+    }
+  }
+
+  .option-card {
+    .option-text h2 {
+      font-size: 16px;
+    }
+  }
+}
