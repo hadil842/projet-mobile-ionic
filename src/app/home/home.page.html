@@ -1,36 +1,36 @@
-<ion-header [translucent]="true">
+ <ion-header [translucent]="true">
+
 <app-header></app-header>
+
 </ion-header>
-
 <ion-content>
-  <h2 >Le futur du travail independant<br> dans votre poche </h2>
-  <input id="recherche"placeholder="Rechercher"><ion-icon name="search-circle-outline"></ion-icon>
-  <div id="container">
-
-    <ion-button slot="start"class="icon"(click)="gotoprogrammation()">
-     <ion-icon name="code-working-outline"></ion-icon>
-     </ion-button>
-
-     <ion-button class="icon"(click)="gotograhics()">
-    <ion-icon name="image-outline"></ion-icon>
-     </ion-button>
-
-     <ion-button slot="end"class="icon"(click)="gotodigital()">
-     <ion-icon name="phone-portrait-outline"></ion-icon>
-     </ion-button>
-
-     <ion-button slot="start"class="icon"(click)="gotowriting()">
-     <ion-icon name="language-outline"></ion-icon>
-     </ion-button>
-
-     <ion-button class="icon"(click)="gotovideos()">
-   <ion-icon name="videocam-outline"></ion-icon>
-     </ion-button>
-
-     <ion-button slot="end"class="icon"(click)="gotoaiser()">
-    <ion-icon name="laptop-outline"></ion-icon>
-   </ion-button>
+  <div class="welcome-text">
+    <h2>Le futur du travail<br>indépendant dans votre poche</h2>
   </div>
 
+  <div class="search-container">
+    <input placeholder="Rechercher" class="custom-search">
+  </div>
+
+  <div class="icon-grid">
+    <ion-button fill="clear" class="category-btn" (click)="gotoprogrammation()">
+      <ion-icon name="code-working-outline"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear" class="category-btn" (click)="gotograhics()">
+      <ion-icon name="image-outline"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear" class="category-btn" (click)="gotodigital()">
+      <ion-icon name="phone-portrait-outline"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear" class="category-btn" (click)="gotowriting()">
+      <ion-icon name="language-outline"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear" class="category-btn" (click)="gotovideos()">
+      <ion-icon name="videocam-outline"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear" class="category-btn" (click)="gotoaiser()">
+      <ion-icon name="laptop-outline"></ion-icon>
+    </ion-button>
+  </div>
 </ion-content>
 <ion-footer><ion-toolbar><app-navbar></app-navbar></ion-toolbar> </ion-footer>

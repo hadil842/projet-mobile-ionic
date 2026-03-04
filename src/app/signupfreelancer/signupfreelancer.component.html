@@ -7,26 +7,40 @@
     <p class="sub-title">Join our community of talents</p>
   </div>
 
-  <form>
+  <form #form="ngForm">
     <ion-list lines="none">
       <ion-item class="custom-input">
-        <ion-input label="Full Name" labelPlacement="stacked" placeholder="Enter your full name " type="text"></ion-input>
+        <ion-input label="First Name" labelPlacement="stacked" placeholder="First name " type="text"[(ngModel)]="nomfreel"name="nomfreel"></ion-input>
       </ion-item>
 
       <ion-item class="custom-input">
-        <ion-input label="Email Address" labelPlacement="stacked" placeholder="exemple@example.com" type="email"></ion-input>
+        <ion-input label="Last Name" labelPlacement="stacked" placeholder="Last Name" type="text" [(ngModel)]="prenomfreel"name="prenomfreel"></ion-input>
+      </ion-item>
+     <ion-item class="custom-input">
+        <ion-input label="Email Address" labelPlacement="stacked" placeholder="exemple@example.com" type="email"[(ngModel)]="emailfreel"name="emailfreel"></ion-input>
+      </ion-item>
+     <ion-item class="custom-input">
+        <ion-input label="Profession" labelPlacement="stacked" placeholder="Profession" type="text"[(ngModel)]="professionfreel"name="professionfreel"></ion-input>
+      </ion-item>
+    <ion-item class="custom-input">
+        <ion-input label="Bio" labelPlacement="stacked" placeholder="bio" type="text"[(ngModel)]="bio"name="bio"></ion-input>
+      </ion-item>
+     <ion-item class="custom-input">
+        <ion-input label="Competance" labelPlacement="stacked" placeholder="Competance" type="text"[(ngModel)]="competance"name="competance"></ion-input>
+      </ion-item>
+      <ion-item class="custom-input">
+        <ion-input label="Portfolio" labelPlacement="stacked" placeholder="Portfolio" type="text"[(ngModel)]="portfolio"name="portfolio"></ion-input>
+      </ion-item><ion-item class="custom-input">
+        <ion-input label="Cv" labelPlacement="stacked" placeholder="cv" type="text"[(ngModel)]="cv"name="cv"></ion-input>
+      </ion-item>
+
+
+      <ion-item class="custom-input">
+        <ion-input label="Password" labelPlacement="stacked" placeholder="********" type="password"[(ngModel)]="password"name="password"></ion-input>
       </ion-item>
 
       <ion-item class="custom-input">
-        <ion-input label="Phone Number" labelPlacement="stacked" placeholder="+216 99 999 999" type="tel"></ion-input>
-      </ion-item>
-
-      <ion-item class="custom-input">
-        <ion-input label="Password" labelPlacement="stacked" placeholder="********" type="password"></ion-input>
-      </ion-item>
-
-      <ion-item class="custom-input">
-        <ion-input label="Confirm Password" labelPlacement="stacked" placeholder="********" type="password"></ion-input>
+        <ion-input label="Confirm Password" labelPlacement="stacked" placeholder="********" type="password"[(ngModel)]="passwordverif"name="password"></ion-input>
       </ion-item>
     </ion-list>
 
@@ -39,9 +53,11 @@
     </span >
   </label>
 </div>
-
+    <div *ngIf="messageSucces">
+    {{ messageSucces }}
+</div>
     <div class="button-wrapper">
-      <button class="signup-button">Sign Up</button>
+      <button class="signup-button"(click)="creercompte()">Sign Up</button>
     </div>
   </form>
 </ion-content>

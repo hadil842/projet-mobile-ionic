@@ -2,62 +2,45 @@
 <app-header></app-header>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
   <h1>Welcome Back to FreeFlow</h1>
+
+  <form #form="ngForm">
   <div class="login-container">
-
-    <!-- Champ Email -->
-    <ion-item class="input-item">
-      <ion-input
-        type="email"
-        label="Username or Email"
-        label-placement="floating"
-        placeholder="Enter your username or email">
-      </ion-input>
+    <ion-item class="input-item" lines="none">
+      <ion-input type="email" label="Username or Email" label-placement="floating" placeholder="Enter email"[(ngModel)]="prenomuser"name="prenomclient"></ion-input>
     </ion-item>
 
-    <!-- Champ mot de passe  -->
-    <ion-item class="input-item">
-      <ion-input
-        type="password"
-        label="PassWord"
-        label-placement="floating"
-        placeholder="Enter your password">
-      </ion-input>
+    <ion-item class="input-item" lines="none">
+      <ion-input type="password" label="Password" label-placement="floating" placeholder="Enter password"[(ngModel)]="password"name="password"></ion-input>
     </ion-item>
 
-    <!-- Bouton Continue -->
-    <ion-button  class="continue-button">
-      Continue
+    <ion-button expand="block" class="continue-button"(click)="loginclient()">
+      Login as Client
     </ion-button>
-
-    <!-- Séparateur -->
-    <div class="separator">
-      <span>or</span>
+    <ion-button expand="block" class="continue-button"(click)="loginfreelancer()">
+      Login as Freelancer
+    </ion-button>
     </div>
+    <div *ngIf="messageSucces">
+    {{ messageSucces }}
+</div>
+    <div class="separator"><span>or</span></div>
 
-    <!-- Google -->
-    <ion-button expand="block" class="social-button">
+    <ion-button expand="block" fill="outline" class="social-button">
       <ion-icon slot="start" name="logo-google"></ion-icon>
       Continue with Google
     </ion-button>
 
-    <!-- Apple -->
     <ion-button expand="block" class="social-button apple-button">
       <ion-icon slot="start" name="logo-apple"></ion-icon>
       Continue with Apple
     </ion-button>
 
-    <!-- Signup -->
     <div class="signup-section">
-      <p class="signup-text">Don't have an account?</p>
-      <ion-button fill="clear" class="signup-button" (click)="goToSignup()">
-        Sign Up
-      </ion-button>
+       <span class="signup-text">Don't have an account?</span>
+       <ion-button fill="clear" (click)="goToSignup()">Sign Up</ion-button>
     </div>
-
-  </div>
-
+  </form>
 </ion-content>
-
 <ion-footer><ion-toolbar><app-navbar></app-navbar></ion-toolbar> </ion-footer>

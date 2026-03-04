@@ -6,7 +6,7 @@ import { IonToolbar, IonImg, IonTitle, IonButton, IonButtons } from "@ionic/angu
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  imports: [IonButtons, IonButton, IonTitle, IonImg, IonToolbar,IonButtons],
+  imports: [IonButtons, IonButton, IonTitle, IonToolbar,IonButtons],
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent  implements OnInit {
