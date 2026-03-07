@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { IonHeader, IonFooter, IonToolbar, IonContent, IonCard, IonButton, IonIcon, IonCardContent } from "@ionic/angular/standalone";
-import { HeaderComponent } from "../navbar/header/header.component";
-import { NavbarComponent } from "../navbar/navbar/navbar.component";
+
 import { NavController } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
+import { HeaderComponent } from 'src/app/navbar/header/header.component';
+import { NavbarComponent } from 'src/app/navbar/navbar/navbar.component';
 @Component({
   selector: 'app-signup1',
   templateUrl: './signup1.component.html',

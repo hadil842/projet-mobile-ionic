@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { IonToolbar, IonFooter, IonHeader, IonButton, IonContent, IonIcon, IonItem, IonInput, IonLabel, IonCheckbox, IonSelectOption, IonSelect, IonText, IonNote, IonCol, IonGrid, IonRow, IonChip, IonList } from "@ionic/angular/standalone";
-import { NavbarComponent } from "../navbar/navbar/navbar.component";
-import { HeaderComponent } from "../navbar/header/header.component";
+
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { Freelancer } from '../service/freelancer';
+import { NavbarComponent } from 'src/app/navbar/navbar/navbar.component';
+import { HeaderComponent } from 'src/app/navbar/header/header.component';
+import { Freelancer } from 'src/app/service/freelancer';
+
 @Component({
   selector: 'app-signupfreelancer',
   templateUrl: './signupfreelancer.component.html',

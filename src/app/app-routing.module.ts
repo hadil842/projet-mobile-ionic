@@ -8,9 +8,9 @@ import { DigitalmarketingComponent } from './categorie/digitalmarketing/digitalm
 import { AiserComponent } from './categorie/aiser/aiser.component';
 import { AjoutoptionComponent } from './ajout/ajoutoption/ajoutoption.component';
 import { LoginComponent } from './login/login.component';
-import { Signup1Component } from './signup1/signup1.component';
-import { SignupfreelancerComponent } from './signupfreelancer/signupfreelancer.component';
-import { SignupclientComponent } from './signupclient/signupclient.component';
+import { Signup1Component } from './sign up/signup1/signup1.component';
+import { SignupfreelancerComponent } from './sign up/signupfreelancer/signupfreelancer.component';
+import { SignupclientComponent } from './sign up/signupclient/signupclient.component';
 
 const routes: Routes = [
   {

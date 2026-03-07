@@ -21,7 +21,7 @@ export class Freelancer {
       },
       error: (err) => {
         console.error("Erreur du creation", err);
-        resolve(0);
+        reject(0);
       }
     });});
   }
