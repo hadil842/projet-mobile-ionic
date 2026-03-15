@@ -30,12 +30,11 @@ export class SignupclientComponent {
   async creercompte():Promise<void> {
       let data=JSON.stringify({nom:this.nomclient,prenom:this.prenomclient,email:this.email,password:this.password,profession:this.profession
       });
-      if(await this.client.creerclient(data)==1 && this.password===this.passwordverif){
-      this.client.setnameclient(this.nomclient);
-      this.messageSucces = "Compte créé avec succès !";}
-      else{
+      if(this.password===this.passwordverif){
+          if(await this.client.creerclient(data)==201) this.messageSucces = "Compte créé";
+          else {
         this.messageSucces = "Compte non créé";
-      }
+      }}
 
 
   }

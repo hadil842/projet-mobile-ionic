@@ -8,42 +8,35 @@ export class Client {
 
      nomclient:string="";
 
-     constructor(private http:HttpClient){}
+     constructor(){}
 
-     creerclient(data:any):Promise<number>{
-      const headers = new HttpHeaders({
-      'Content-Type': 'application/json'
-    });
-    return new Promise((resolve, reject) => {
-       this.http.post('http://127.0.0.1:5000/signclient',data,{headers}).subscribe({
-       next: (response) => {
-        console.log("Compte cree avec succes", response);
-        resolve(1);
-      },
-      error: (err) => {
-        console.error("Erreur du creation", err);
-        reject(0);
-      }
-    });
-     });}
+     async creerclient(data:any):Promise<any>{
+         try{
+              let response=await fetch('http://127.0.0.1:5000/signclient',{method:'POST',
+            headers:{'Content-Type':'application/json'},
+            body:data
+            });
+            console.log(response.status);
+           return response.status;}
+        catch(error){
+              console.log("login failed");
+            return 500;
+        }}
      setnameclient(nom:string){
            this.nomclient=nom;
      }
-     loginclient(data:any):Promise<number>{
-      const headers = new HttpHeaders({
-      'Content-Type': 'application/json'
-    });
-      return new Promise((resolve, reject) => {
-    this.http.post('http://127.0.0.1:5000/loginclient', data, { headers }).subscribe({
-      next: (response) => {
-        console.log("Connexion réussie", response);
-        this.setnameclient(data.nom);
-        resolve(1);
-      },
-      error: (err) => {
-        console.error("Erreur login", err);
-        reject(0);
-      }
-    });
-  });}
+     async loginclient(data:any):Promise<any>{
+      try{
+       let reponse =await fetch('http://127.0.0.1:5000/loginclient',{
+            method:'POST',
+            headers:{'Content-Type':'application/json'},
+            body:data
+            });
+            console.log(reponse.status);
+        return reponse.status;}
+        catch(error){
+            console.log("login failed");
+            return 500;
+        }
+     }
 }

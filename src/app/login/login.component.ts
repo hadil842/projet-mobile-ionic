@@ -31,13 +31,14 @@ export class LoginComponent  implements OnInit {
 
   async loginclient():Promise<void>{
     let requete=JSON.stringify({prenom:this.prenomuser,password:this.password})
-    if(await this.client.loginclient(requete)==1){this.messageSucces="Connexion avec Succes";}
+    if(await this.client.loginclient(requete)==201){this.messageSucces="Connexion avec Succes";}
+    else if(await this.client.loginclient(requete)==404)this.messageSucces='Utilisateur invalide';
     else this.messageSucces="Connexion non retablie";
   }
 
   async loginfreelancer():Promise<void>{
-    let requete=JSON.stringify({prenom:this.prenomuser,password:this.password});
-     if( await this.freelancer.loginfreelancer(requete)==1){this.messageSucces="Connexion avec Succes";}
+   let requete=JSON.stringify({prenom:this.prenomuser,password:this.password})
+    if(await this.freelancer.loginfreelancer(requete)==201){this.messageSucces="Connexion avec Succes";}
+    else if(await this.freelancer.loginfreelancer(requete)==404)this.messageSucces='Utilisateur invalide';
     else this.messageSucces="Connexion non retablie";
-  }
-}
+}}

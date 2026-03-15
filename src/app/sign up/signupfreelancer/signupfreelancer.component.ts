@@ -31,14 +31,11 @@ export class SignupfreelancerComponent {
       let data=JSON.stringify({nom:this.nomfreel,prenom:this.prenomfreel,email:this.emailfreel,password:this.password,
         profession:this.professionfreel,bio:this.bio,cv:this.cv,portfolio:this.portfolio,competance:this.competance
       });
-      if(await this.freelancer.creerfreelancer(data)==1 && this.password===this.passwordverif){
-      this.freelancer.setnamefreelancer(this.nomfreel);
-      this.messageSucces = "Compte créé avec succès !";}
-      else {
+      if(this.password===this.passwordverif){
+          if(await this.freelancer.creerfreelancer(data)==201) this.messageSucces = "Compte créé";
+          else {
         this.messageSucces = "Compte non créé";
-      }
-
-
+      }}
   }
 
 }
