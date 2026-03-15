@@ -12,7 +12,7 @@ export class Client {
 
      async creerclient(data:any):Promise<any>{
          try{
-              let response=await fetch('http://127.0.0.1:5000/signclient',{method:'POST',
+              let response=await fetch('http://127.0.0.1:5000/signin/signclient',{method:'POST',
             headers:{'Content-Type':'application/json'},
             body:data
             });
@@ -27,7 +27,7 @@ export class Client {
      }
      async loginclient(data:any):Promise<any>{
       try{
-       let reponse =await fetch('http://127.0.0.1:5000/loginclient',{
+       let reponse =await fetch('http://127.0.0.1:5000/login/loginclient/',{
             method:'POST',
             headers:{'Content-Type':'application/json'},
             body:data

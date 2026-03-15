@@ -11,7 +11,7 @@ export class Freelancer {
 
     async creerfreelancer(data:any):Promise<any>{
          try{
-              let response=await fetch('http://127.0.0.1:5000/signfreelancer',{method:'POST',
+              let response=await fetch('http://127.0.0.1:5000/signin/signfreelancer',{method:'POST',
             headers:{'Content-Type':'application/json'},
             body:data
             });
@@ -26,7 +26,7 @@ export class Freelancer {
      }
      async loginfreelancer(data:any):Promise<any>{
       try{
-       let reponse =await fetch('http://127.0.0.1:5000/loginfreel',{
+       let reponse =await fetch('http://127.0.0.1:5000/login/loginfreel',{
             method:'POST',
             headers:{'Content-Type':'application/json'},
             body:data
